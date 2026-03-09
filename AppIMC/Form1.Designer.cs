@@ -47,26 +47,31 @@
             // 
             // lblClassific
             // 
-            lblClassific.AutoSize = true;
-            lblClassific.Font = new Font("Comic Sans MS", 18F);
-            lblClassific.ForeColor = Color.DarkMagenta;
-            lblClassific.Location = new Point(19, 233);
+            lblClassific.Anchor = AnchorStyles.None;
+            lblClassific.BackColor = Color.Transparent;
+            lblClassific.Font = new Font("Swis721 BlkEx BT", 15.75F);
+            lblClassific.ForeColor = SystemColors.ActiveCaptionText;
+            lblClassific.Location = new Point(9, 233);
             lblClassific.Name = "lblClassific";
-            lblClassific.Size = new Size(0, 33);
+            lblClassific.Size = new Size(279, 33);
             lblClassific.TabIndex = 11;
+            lblClassific.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblIMC
             // 
-            lblIMC.AutoSize = true;
-            lblIMC.Font = new Font("Comic Sans MS", 18F);
-            lblIMC.ForeColor = Color.DarkBlue;
-            lblIMC.Location = new Point(19, 187);
+            lblIMC.Anchor = AnchorStyles.None;
+            lblIMC.BackColor = Color.Transparent;
+            lblIMC.Font = new Font("Swis721 BlkEx BT", 15.75F);
+            lblIMC.ForeColor = SystemColors.ActiveCaptionText;
+            lblIMC.Location = new Point(9, 187);
             lblIMC.Name = "lblIMC";
-            lblIMC.Size = new Size(0, 33);
+            lblIMC.Size = new Size(279, 33);
             lblIMC.TabIndex = 10;
+            lblIMC.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btCalc
             // 
+            btCalc.Anchor = AnchorStyles.None;
             btCalc.Enabled = false;
             btCalc.FlatAppearance.BorderColor = Color.FromArgb(128, 128, 255);
             btCalc.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 128, 255);
@@ -83,6 +88,7 @@
             // 
             // nudPeso
             // 
+            nudPeso.Anchor = AnchorStyles.None;
             nudPeso.DecimalPlaces = 2;
             nudPeso.Font = new Font("Comic Sans MS", 18F);
             nudPeso.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
@@ -95,6 +101,7 @@
             // nudAltura
             // 
             nudAltura.AccessibleDescription = "oi";
+            nudAltura.Anchor = AnchorStyles.None;
             nudAltura.DecimalPlaces = 2;
             nudAltura.Font = new Font("Comic Sans MS", 18F);
             nudAltura.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
@@ -107,68 +114,74 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Comic Sans MS", 18F);
-            label5.ForeColor = Color.DarkTurquoise;
+            label5.Font = new Font("Swis721 BlkEx BT", 15.75F);
+            label5.ForeColor = SystemColors.ActiveCaptionText;
             label5.Location = new Point(255, 104);
             label5.Name = "label5";
-            label5.Size = new Size(42, 33);
+            label5.Size = new Size(47, 25);
             label5.TabIndex = 6;
             label5.Text = "kg";
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Comic Sans MS", 18F);
-            label4.ForeColor = Color.Gold;
+            label4.Font = new Font("Swis721 BlkEx BT", 15.75F);
+            label4.ForeColor = SystemColors.ActiveCaptionText;
             label4.Location = new Point(255, 50);
             label4.Name = "label4";
-            label4.Size = new Size(33, 33);
+            label4.Size = new Size(39, 25);
             label4.TabIndex = 5;
             label4.Text = "m";
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Comic Sans MS", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Firebrick;
+            label3.Font = new Font("Swis721 BlkEx BT", 15.75F);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
             label3.Location = new Point(12, 9);
             label3.Name = "label3";
-            label3.Size = new Size(77, 40);
+            label3.Size = new Size(69, 25);
             label3.TabIndex = 4;
             label3.Text = "IMC";
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Comic Sans MS", 18F);
-            label2.ForeColor = Color.SpringGreen;
+            label2.Font = new Font("Swis721 BlkEx BT", 15.75F);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
             label2.Location = new Point(23, 96);
             label2.Name = "label2";
-            label2.Size = new Size(73, 33);
+            label2.Size = new Size(95, 25);
             label2.TabIndex = 2;
             label2.Text = "Peso:";
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Comic Sans MS", 18F);
-            label1.ForeColor = Color.FromArgb(255, 128, 0);
+            label1.Font = new Font("Swis721 BlkEx BT", 15.75F);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(5, 44);
             label1.Name = "label1";
-            label1.Size = new Size(91, 33);
+            label1.Size = new Size(109, 25);
             label1.TabIndex = 0;
             label1.Text = "Altura:";
             // 
             // pictureBox1
             // 
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
