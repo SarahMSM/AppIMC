@@ -40,6 +40,7 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            btProximo_Click = new Button();
             ((System.ComponentModel.ISupportInitialize)nudPeso).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudAltura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -48,24 +49,26 @@
             // lblClassific
             // 
             lblClassific.Anchor = AnchorStyles.None;
+            lblClassific.AutoSize = true;
             lblClassific.BackColor = Color.Transparent;
             lblClassific.Font = new Font("Swis721 BlkEx BT", 15.75F);
             lblClassific.ForeColor = SystemColors.ActiveCaptionText;
             lblClassific.Location = new Point(9, 233);
             lblClassific.Name = "lblClassific";
-            lblClassific.Size = new Size(279, 33);
+            lblClassific.Size = new Size(0, 25);
             lblClassific.TabIndex = 11;
             lblClassific.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblIMC
             // 
             lblIMC.Anchor = AnchorStyles.None;
+            lblIMC.AutoSize = true;
             lblIMC.BackColor = Color.Transparent;
             lblIMC.Font = new Font("Swis721 BlkEx BT", 15.75F);
             lblIMC.ForeColor = SystemColors.ActiveCaptionText;
             lblIMC.Location = new Point(9, 187);
             lblIMC.Name = "lblIMC";
-            lblIMC.Size = new Size(279, 33);
+            lblIMC.Size = new Size(0, 25);
             lblIMC.TabIndex = 10;
             lblIMC.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -78,7 +81,7 @@
             btCalc.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 192, 255);
             btCalc.FlatStyle = FlatStyle.Flat;
             btCalc.Font = new Font("Comic Sans MS", 18F);
-            btCalc.Location = new Point(95, 143);
+            btCalc.Location = new Point(111, 143);
             btCalc.Name = "btCalc";
             btCalc.Size = new Size(154, 41);
             btCalc.TabIndex = 9;
@@ -92,11 +95,12 @@
             nudPeso.DecimalPlaces = 2;
             nudPeso.Font = new Font("Comic Sans MS", 18F);
             nudPeso.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
-            nudPeso.Location = new Point(95, 96);
+            nudPeso.Location = new Point(111, 96);
             nudPeso.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nudPeso.Name = "nudPeso";
             nudPeso.Size = new Size(154, 41);
             nudPeso.TabIndex = 8;
+            nudPeso.ValueChanged += nudPeso_ValueChanged;
             // 
             // nudAltura
             // 
@@ -105,7 +109,7 @@
             nudAltura.DecimalPlaces = 2;
             nudAltura.Font = new Font("Comic Sans MS", 18F);
             nudAltura.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            nudAltura.Location = new Point(95, 42);
+            nudAltura.Location = new Point(111, 42);
             nudAltura.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nudAltura.Name = "nudAltura";
             nudAltura.Size = new Size(154, 41);
@@ -119,11 +123,12 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Swis721 BlkEx BT", 15.75F);
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(255, 104);
+            label5.Location = new Point(271, 104);
             label5.Name = "label5";
             label5.Size = new Size(47, 25);
             label5.TabIndex = 6;
             label5.Text = "kg";
+            label5.Click += label5_Click;
             // 
             // label4
             // 
@@ -132,7 +137,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Swis721 BlkEx BT", 15.75F);
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(255, 50);
+            label4.Location = new Point(271, 50);
             label4.Name = "label4";
             label4.Size = new Size(39, 25);
             label4.TabIndex = 5;
@@ -159,7 +164,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Swis721 BlkEx BT", 15.75F);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(23, 96);
+            label2.Location = new Point(2, 104);
             label2.Name = "label2";
             label2.Size = new Size(95, 25);
             label2.TabIndex = 2;
@@ -172,7 +177,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Swis721 BlkEx BT", 15.75F);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(5, 44);
+            label1.Location = new Point(0, 50);
             label1.Name = "label1";
             label1.Size = new Size(109, 25);
             label1.TabIndex = 0;
@@ -191,12 +196,25 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // btProximo_Click
+            // 
+            btProximo_Click.AutoSize = true;
+            btProximo_Click.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btProximo_Click.Location = new Point(91, 190);
+            btProximo_Click.Name = "btProximo_Click";
+            btProximo_Click.Size = new Size(190, 43);
+            btProximo_Click.TabIndex = 13;
+            btProximo_Click.Text = "Próxima página";
+            btProximo_Click.UseVisualStyleBackColor = true;
+            btProximo_Click.Click += btProximo_Click_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(322, 291);
+            Controls.Add(btProximo_Click);
             Controls.Add(lblClassific);
             Controls.Add(lblIMC);
             Controls.Add(btCalc);
@@ -212,6 +230,8 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora de IMC";
+            FormClosing += Form1_FormClosing;
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)nudPeso).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudAltura).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -232,5 +252,6 @@
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
+        private Button btProximo_Click;
     }
 }

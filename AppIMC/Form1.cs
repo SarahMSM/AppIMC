@@ -1,3 +1,5 @@
+using static System.Windows.Forms.DataFormats;
+
 namespace AppIMC
 {
     public partial class Form1 : Form
@@ -54,6 +56,42 @@ namespace AppIMC
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nudPeso_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bem-vindo à calculadora de IMC :3");
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Deseja mesmo fechar?",
+                             "Calculadora de IMC",
+                             MessageBoxButtons.YesNo);
+            if (r == DialogResult.No)
+                e.Cancel = true;
+        }
+
+        private void btProximo_Click_Click(object sender, EventArgs e)
+        {
+            // 1. Instanciar o novo formulário
+            FrmOutro novoForm = new FrmOutro();
+
+            // 2. Mostrar o novo formulário
+            novoForm.Show();
+
+            // 3. Esconder o formulário atual
+            this.Hide();
         }
     }
 }
